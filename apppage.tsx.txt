@@ -1,0 +1,61 @@
+'use client'
+
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
+export default function Home() {
+  return (
+    <div className="p-6 max-w-4xl mx-auto space-y-10">
+      <header className="text-center space-y-2">
+        <h1 className="text-4xl font-bold">Delicii Catering</h1>
+        <p className="text-lg text-gray-600">Bucurie în farfurie pentru orice ocazie!</p>
+      </header>
+
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Despre noi</h2>
+        <p>Suntem o echipă de bucătari pasionați, specializați în preparate proaspete și gustoase pentru evenimente private, corporate și meniuri zilnice livrate direct la birou sau acasă.</p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Serviciile noastre</h2>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Catering pentru evenimente private</li>
+          <li>Meniuri zilnice livrate la birou</li>
+          <li>Platouri festive pentru sărbători</li>
+          <li>Servicii coffee-break pentru conferințe</li>
+        </ul>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Meniu zilnic</h2>
+        <Card>
+          <CardContent className="p-4 space-y-1">
+            <p><strong>Ciorbă de legume</strong></p>
+            <p><strong>Pui la grătar cu piure de cartofi</strong></p>
+            <p><strong>Salată de varză</strong></p>
+            <p><strong>Desert: Clătite cu gem</strong></p>
+            <p className="font-bold">Preț: 38 lei / porție</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-2xl font-semibold">Comandă rapid</h2>
+        <form className="space-y-3">
+          <Input placeholder="Nume" required />
+          <Input type="email" placeholder="Email" required />
+          <Input type="tel" placeholder="Telefon" required />
+          <Textarea placeholder="Ce dorești să comanzi?" rows={4} required />
+          <Button type="submit">Trimite comanda</Button>
+        </form>
+      </section>
+
+      <footer className="text-center text-sm text-gray-500">
+        <p>📞 0723 456 789 | 📧 contact@deliciicatering.ro</p>
+        <p>© 2025 Delicii Catering</p>
+      </footer>
+    </div>
+  )
+}
